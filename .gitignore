@@ -61,6 +61,8 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 
+learn_py #  This is a directory for the python virtual environment since I use a linux system.
+
 # Flask stuff:
 instance/
 .webassets-cache
