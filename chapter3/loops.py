@@ -33,4 +33,21 @@ while count < 10:
   if count % 2 != 0:
     print(count)
     continue
-'''
+
+
+# for loops with lists
+names = ['yoshi', 'mario', 'luigi', 'peach']
+
+# for name in names:
+  # print(name)
+
+for name in names:
+  if(name == 'mario'):
+    continue
+  # print(name)
+
+# for loop with strings
+
+for letter in 'ninja':
+  print(letter.upper())
+  '''
