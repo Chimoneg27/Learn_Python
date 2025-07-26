@@ -51,3 +51,21 @@ for name in names:
 for letter in 'ninja':
   print(letter.upper())
   '''
+# ranges in loops
+
+# for loops with range
+
+# for i in range(5):
+#   print('Iteration:', i)
+
+# for i in range(10, 20):
+#   print(i)
+
+for i in range(10, 20, 2): # step by 2
+  print(i)
+  
+# negative steps
+
+for i in range(10, 0, -1): # step by -1
+  print(i)
+  # the natural step is to go up 
