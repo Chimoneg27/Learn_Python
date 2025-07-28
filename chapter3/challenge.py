@@ -11,10 +11,11 @@ while True:
   
   # Challenge: ask user for price (int)
   # handle any ValueError by printing a message, skipping a loop and asking for a new item
+  
   try:
     price = int(input("Enter the price (£) of the item: "))
   except ValueError as e:
-    print('Please enter a valid number')
+    print('Please enter a number', e)
     continue
 
   shopping_list.append((item, price))
@@ -22,13 +23,10 @@ while True:
 # SECTION TWO - formatting the shopping list
 total = 0
 
-for item in shopping_list:
-  print(f'{item[0]} - £{item[1]}')
-  total += item[1]
-
-print(shopping_list)
-print(f'your total is: £{total}')
-print()
-
+for item, price in shopping_list:
+  print(f'{item} - £{price}')
+  total += price
+  
+print(f'total - {price}')
 # Challenge: use a for loop to print each item and price on its own line
 # after all items have been output, also print out the total price
