@@ -68,7 +68,7 @@ def print_ninja(**kwargs):
     print(f'{key} -- {value}')
 
 print_ninja(name='mario', age=30, location='italy')
-print_ninja(name='mario', age=30, location='italy', profession='ninja')'''
+print_ninja(name='mario', age=30, location='italy', profession='ninja')
 
 # return values
 def square(x):
@@ -96,3 +96,14 @@ def do_something():
   
 result = do_something()
 print(result)  # prints None since the function returns nothing when age is less than 20
+
+# main function
+def main():
+  print('hello from the main function')
+  
+if __name__ == '__main__':
+  main()
+
+# name of the file
+# __main__
+'''
