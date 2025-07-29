@@ -57,7 +57,7 @@ def print_total(*args):
   print(f'The total is: {total}')
 
 print_total(50, 75)
-print_total(50, 75, 100)'''
+print_total(50, 75, 100)
 
 # keyword arguements(kwargs)
 
@@ -68,4 +68,31 @@ def print_ninja(**kwargs):
     print(f'{key} -- {value}')
 
 print_ninja(name='mario', age=30, location='italy')
-print_ninja(name='mario', age=30, location='italy', profession='ninja')
+print_ninja(name='mario', age=30, location='italy', profession='ninja')'''
+
+# return values
+def square(x):
+  return x * x
+
+result = square(5)
+print(result)
+
+# returning multiple values
+def get_coords():
+  x = 25.5
+  y = 48.2
+  return x, y  # this will return the values as a tuple
+
+a, b = get_coords()
+print(a, b)  # prints the tuple (25.5, 48.2)
+
+# using return to break out of a function
+age = 25
+
+def do_something():
+  if age < 20:
+    return
+  print(age)
+  
+result = do_something()
+print(result)  # prints None since the function returns nothing when age is less than 20
