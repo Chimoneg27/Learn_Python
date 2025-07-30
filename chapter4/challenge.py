@@ -5,7 +5,7 @@ contacts = []
 
 def add_contact(name, email):
   contacts.append({name, email})
-  return contacts
+  return
   
 
 # CHALLENGE - create a list_contacts function to print out all contacts
