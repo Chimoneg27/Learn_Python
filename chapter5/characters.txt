@@ -2,3 +2,4 @@ mario
 luigi
 peach
 bowser
+toad
