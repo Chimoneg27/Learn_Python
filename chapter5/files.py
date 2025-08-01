@@ -1,4 +1,6 @@
 # reading files
+from pathlib import Path
+
 '''
 def read_file():
   # open file
@@ -35,7 +37,7 @@ def write_characters_to_file(filename):
   
   # closing the file
   file.close()
-  return'''
+  return
 
 # appending data to files 
 
@@ -56,9 +58,31 @@ def write_characters_to_file(filename):
   # closing the file
   file.close()
   return
+'''
+# working with paths
+from pathlib import Path
+# pathlib moduele
+
+file = open('characters.txt', 'r')
+
+def create_path():
+  script_dir = Path(__file__).parent
+  
+  path = script_dir / 'characters'
+  path.mkdir(parents=True, exist_ok=True)
+  path = path / 'zelda.txt'
+  
+  file = path.open('r')
+  content = file.read()
+  print(content)
+  
+  file.close()
+  path.write_text('Epona')
+  # print(script_dir.parent)
+  return
 
 def main():
-  write_characters_to_file('characters.txt')
+  create_path()
   return
 
 if __name__ == "__main__":
