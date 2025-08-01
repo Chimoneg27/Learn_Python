@@ -1,0 +1,36 @@
+{
+  "characters": [
+    {
+      "name": "Mario",
+      "age": 25
+    },
+    {
+      "name": "Luigi",
+      "age": 24
+    },
+    {
+      "name": "Peach",
+      "age": 22
+    },
+    {
+      "name": "Bowser",
+      "age": 30
+    },
+    {
+      "name": "Toad",
+      "age": 20
+    },
+    {
+      "name": "Yoshi",
+      "age": 21
+    },
+    {
+      "name": "Wario",
+      "age": 28
+    },
+    {
+      "name": "Waluigi",
+      "age": 27
+    }
+  ]
+}
