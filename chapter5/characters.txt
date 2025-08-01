@@ -3,8 +3,3 @@ luigi
 peach
 bowser
 toad
-diddy kong
-donkey kong
-diddy kong jr
-king k rool
-cranky kong

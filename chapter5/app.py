@@ -1,19 +1,13 @@
 from pathlib import Path
 
 def open_file():
-  path = Path(__file__).parent
-  path = path / 'does' / 'not' / 'exist.txt'
+  path = Path(__file__).parent / 'characters.txt'
+  data = ['mario', 'luigi', 'peach', 'bowser', 'toad']
   
-  path.open('r')
-  try:
-    file = path.open('r')
-    content = file.read()
-    print(content)
-    file.close()
-  except FileNotFoundError:
-    print(f"File not found: {path}")
-  except Exception as e:
-    print(f"An error occurred: {e}")
+  # context managers --> automatically close the file
+  with path.open('w') as file:
+    for character in data:
+      file.write(character + '\n')
 
 def main():
   open_file()
