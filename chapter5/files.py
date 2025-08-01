@@ -15,7 +15,7 @@ def read_file():
   # close the file
   file.close()
   
-  return'''
+  return
 
 
 # writing data to files
@@ -32,6 +32,26 @@ def write_characters_to_file(filename):
   file.seek(0, 0)
   content = file.read()
   print(content) 
+  
+  # closing the file
+  file.close()
+  return'''
+
+# appending data to files 
+
+more_characters = ["diddy kong", "donkey kong", "diddy kong jr", "king k rool", "cranky kong"]
+
+def write_characters_to_file(filename):
+  # open file in append mode
+  file = open(filename, 'a+')
+
+  # append to the file
+  for c in more_characters:
+    file.write(c + '\n')
+
+  # file.seek(0, 0)
+  # content = file.read()
+  # print(content) 
   
   # closing the file
   file.close()
