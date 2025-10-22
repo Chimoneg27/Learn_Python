@@ -31,3 +31,14 @@ decimal = number - integer
 
 print(f"Integer part: {integer}")
 print(f"Decimal part: {decimal}")
+
+# Part 2: More Conditionals
+
+# Exercise: Age of maturity
+
+age = int(input("How old are you? "))
+
+if age <18:
+    print("You are not of age!")
+else:
+    print("You are of age!")
