@@ -42,3 +42,30 @@ if age <18:
     print("You are not of age!")
 else:
     print("You are of age!")
+
+# Exercise: Greater than or equal to
+
+first_num = int(input("Please type in the first number: "))
+second_num = int(input("Please type in another number: "))
+
+if first_num > second_num:
+    print(f"The greater number was: {first_num}")
+elif second_num > first_num:
+    print(f"The greater number was: {second_num}")
+else:
+    print("The numbers are equal!")
+    
+# Exercise: The elder
+
+person1 = input("Person 1: ")
+age1 = int(input("Age: "))
+person2 = input("Person 2: ")
+age2 = int(input("Age: "))
+
+if age1 > age2:
+    print(f"The elder is {person1}")
+elif age2 > age1:
+    print(f"The elder is {person2}")
+elif age1 == age2:
+    print(f"{person1} and {person2} are the same age")
+
