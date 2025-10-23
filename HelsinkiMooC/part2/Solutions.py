@@ -69,3 +69,56 @@ elif age2 > age1:
 elif age1 == age2:
     print(f"{person1} and {person2} are the same age")
 
+
+# Part 2: combining conditionals
+
+# Exercise: Age 
+age = int(input("What is your age?"))
+
+if age >= 5:
+    print(f"Ok, you're {age} years old")
+elif age < 5 and age > -1:
+    print(f"I suspect you can't write quite yet...")
+else:
+    print("That must be a mistake")
+
+# Exercise: Nephew's
+name = input("Please type in your name: ")
+
+if name == 'Huey' or name == 'Dewey' or name == "Louie":
+    print("I think you might be one of Donald Duck's nephews.")
+elif name == 'Morty' or name == 'Ferdie':
+    print("I think you might be one of Mickey Mouse's nephews.")
+else:
+    print("You're not a nephew of any character I know of.")
+
+# Exercise: Grade and points
+
+score = int(input("How many points [0-100]:"))
+
+if score < 0 or score > 100:
+    print("Grade: impossible!")
+elif score >= 0 and score < 50:
+    print(f"Grade: fail")
+elif score >= 50 and score < 60:
+    print(f"Grade: 1")
+elif score >= 60 and score < 70:
+    print(f"Grade: 2")
+elif score >= 70 and score < 80:
+    print(f"Grade: 3")
+elif score >= 80 and score < 90:
+    print(f"Grade: 4")
+elif score >= 90 and score <=100:
+    print(f"Grade: 5")
+
+# Exercise: FizzBuzz
+number = int(input("Number: "))
+
+if number % 3 == 0 and number % 5 == 0:
+    print("FizzBuzz")
+elif number % 3 == 0:
+    print("Fizz")
+elif number % 5 == 0:
+    print("Buzz")
+else:
+    print("")
