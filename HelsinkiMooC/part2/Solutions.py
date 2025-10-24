@@ -122,3 +122,165 @@ elif number % 5 == 0:
     print("Buzz")
 else:
     print("")
+
+# Exercise: The leap year
+
+year = int(input("Please type in a year: "))
+
+if year % 100 == 0 and year % 400 == 0:
+    print("This is a leap year")
+elif year % 4 == 0 and not year % 100 == 0:
+    print("This is a leap year")
+else:
+    print("This is not a leap year")
+
+# Exercise: The middle letter
+
+let1 = input("1st letter:")
+let2 = input("2nd letter:")
+let3 = input("3rd letter:")
+
+if let1 < let2 and let1 > let3:
+    print(f"The letter in the middle is {let1}")
+elif let1 < let3 and let1 > let2:
+    print(f"The letter in the middle is {let1}")
+elif let2 < let3 and let2 > let1:
+    print(f"The letter in the middle is {let2}")
+elif let2 < let1 and let2 > let3:
+    print(f"The letter in the middle is {let2}")
+elif let3 > let1 and let3 < let2:
+    print(f"The letter in the middle is {let3}")
+elif let3 < let1 and let3 > let2:
+    print(f"The letter in the middle is {let3}")
+
+# Exercise: Gift tax
+gift = int(input("Value of gift:"))
+
+if gift < 5000:
+    print("No tax!")
+elif gift >= 5000 and gift < 25000:
+    tax = 100 +((gift - 5000) * 0.08)
+    print(f"Amount of tax: {tax}")
+elif gift >= 25000 and gift < 55000:
+    tax = 1700 + ((gift - 25000) * 0.10)
+    print(f"Amount of tax: {tax}")
+elif gift >= 55000 and gift < 200000:
+    tax = 4700 +((gift -55000) * 0.12)
+    print(f"Amount of tax: {tax}")
+elif gift >= 200000 and gift < 1000000:
+    tax = 22100 + ((gift - 200000) * 0.15)
+    print(f"Amount of tax: {tax}")
+elif gift >= 1000000:
+    tax = 142100 + ((gift - 1000000) * 0.17)
+    print(f"Amount of tax: {tax}")
+
+# Part 4: Simple loops
+
+# Exercise: Shall we continue?
+while True:
+    print('hi')
+    cont = input("Shall we continue?")
+    if cont == 'no':
+        print("okay then")
+        break
+
+# Exercise: Input validation
+from math import sqrt
+
+while True:
+    num = int(input('Please type in a number: '))
+    if num == 0:
+        print("Exiting...")
+        break
+    elif num < 0:
+        print("Invalid number")
+    else:
+        print(sqrt(num))
+
+# Exercise: Fix the code countdown
+number = 5
+print("Countdown!")
+while True:
+  
+  print(number)
+  number = number - 1
+  if number == 0:
+    print("Now!")
+    break
+
+#Exercise: Repeat Password
+passwrd1 = input("Password: ")
+passwrd2 = input("Repeat password: ")
+
+while passwrd1 != passwrd2:
+    print("They do not match!")
+    passwrd2 = input("Repeat password: ")
+print("User account created!")
+
+# Exercise: PIN and number of attempts
+attempts = 0
+while True:
+    pin = int(input("PIN: "))
+    attempts += 1
+
+    if pin == 4321 and attempts == 1:
+        print("Correct! It only took you one single attempt!")
+        break
+    if pin != 4321:
+        print("Wrong")
+    else:
+        print(f"Correct! It took you {attempts} attempts")
+        break
+
+# Exercise: The next leap year
+
+year = int(input("Year: "))
+year_track = year
+
+leap_year = year_track % 4 == 0 and year_track % 100 != 0 or year_track % 100 == 0 and year_track % 400 == 0
+
+if leap_year:
+    year_track += 1
+    leap_year = False
+
+while not leap_year:
+    leap_year = year_track % 4 == 0 and year_track % 100 != 0 or year_track % 100 == 0 and year_track % 400 == 0
+    if not leap_year:
+        year_track += 1
+
+print(f"The next leap year after {year} is {year_track}")
+
+# Exercise: Story
+words = "" 
+prev_word = ''
+while True:
+    word = input("Please type in a word: ")
+    if word == 'end' or word == prev_word:    
+        break
+    words += word + " "
+    prev_word = word
+print(words)
+
+# Exercise : Working with numbers
+import statistics
+
+arr = []
+pos = []
+neg = []
+print("Please type in integer numbers. Type in 0 to finish.")
+
+while True:
+    num = int(input("Number: "))
+    if num == 0:
+        # print('...the program asks for numbers')
+        break
+    arr.append(num)
+    if num > 0:
+        pos.append(num)
+    if num < 0:
+        neg.append(num)
+print(f"Numbers typed in {len(arr)}")
+print(f"The sum of the numbers is {sum(arr)}")
+print(f"The mean of the numbers is {float(statistics.mean(arr))}")
+print(f"Positive numbers {len(pos)}")
+print(f"Negative numbers {len(neg)}")
