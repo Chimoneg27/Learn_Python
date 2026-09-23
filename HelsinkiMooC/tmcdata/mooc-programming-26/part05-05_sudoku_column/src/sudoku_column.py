@@ -31,3 +31,16 @@ def column_correct(sudoku: list, column_no: int):
 
 #   print(column_correct(sudoku, 0))
 #   print(column_correct(sudoku, 1))
+
+"""
+def block_correct(sudoku: list, row_no: int, column_no: int):
+    the_block = []
+    
+    for r in range(row_no, row_no + 3):
+        this_row = []
+        for c in range(???, ??? + 3):   # <- what should the start be?
+            this_row.append(sudoku[r][c])
+        the_block.append(this_row)
+    
+    print(the_block)
+"""
