@@ -62,11 +62,11 @@ def sudoku_grid_correct(sudoku: list):
         return False
     return True
   
-  def all_columns_correct(sudoko):
+  def all_columns_correct(sudoku):
     for column_no in range(9):
       if column_correct(sudoku, column_no) == False:
         return False
-      return True
+    return True
   
   def all_blocks_correct(sudoku):
     for row_start in range(0, 9, 3):
@@ -75,9 +75,7 @@ def sudoku_grid_correct(sudoku: list):
           return False
     return True
 
-  if the_block(sudoku) == True and the_columns(sudoku) == True and rows(sudoku) == True:
-    return True
-  return False
+  return all_row_correct(sudoku) and all_columns_correct(sudoku) and all_blocks_correct(sudoku)
 
   # if __name__ == "__main__":
   #   sudoku = [
